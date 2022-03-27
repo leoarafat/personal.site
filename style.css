@@ -1,0 +1,426 @@
+/*navbar style start here*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+.img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 2px 4px 6px;
+    transition: 3s;
+}
+.img:hover{
+    transform: rotate(360deg);
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+p{
+    font-size: 1.2 rem;
+    text-align: justify;
+}
+a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.navbar{
+    background-color: #0c6168;
+    padding: 1% 7%;
+    text-align: center;
+}
+.navbar h1{
+    color: white;
+    margin: 0;
+    padding-top: 10px;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.nav-menu a{
+    background-color: purple;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 10px;
+}
+.nav-menu a:hover{
+    background-color: orangered;
+}
+
+
+/*for all it's must be will*/
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+
+/*for mobie*/
+[class*="col-"]{
+    width: 100%;
+}
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* navbar style end  */
+
+/* profile style start here */
+.profile{
+    background-color: olivedrab;
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+}
+.profile-desc h1{
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+}
+.profile-desc p{
+    color: rgb(red, green, blue);
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+
+.first-image {
+    position: absolute;
+right: 150px;
+top: 20px;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+transition: transform 2s;
+}
+.first-image:hover{
+    transform: rotate(360deg);
+}
+.profile .last-image{
+    position: absolute;
+left:  60px;
+bottom: 10px;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+transition: transform 2s;
+
+}
+.last-image:hover{
+    transform: rotate(360deg);
+}
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/* profile style end here */
+
+/* about me style start */
+.about-me{
+    background-color: #39a4ac;
+    padding: 1% 7%;
+ color: white;
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+ 
+}
+.about-me::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* dotted hr onkbar use korbo so ata common save korbo */
+.dotted-hr{
+    border: dotted 6px white;
+border-bottom: none;
+margin: 20px auto;
+width: 70px;
+}
+
+.aboutme-image{
+}
+
+.img-im{
+    width: 150px;
+    height: 150px;
+    border: solid 5px white;
+    border-radius: 50%;
+}
+.about-me p{
+    text-align: center;
+}
+
+.about-me a{
+    font-size: 1.2rem;
+}
+.cv-btn{
+    background-color: #052d2f;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+/* about me style end */
+
+
+/* professional experience style start */
+
+.professional-experience{
+padding: 1% 0%;
+}
+.professional-experience .card{
+    background-color: #a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 700px;
+
+}
+.professional-experience .card:hover{
+    box-shadow: 0px 4px 8px 5px black;
+}
+.card-icon{
+    text-align: center;
+}
+.card-icon img{
+    width: 80px;
+    
+}
+
+.rounded-image{
+    border: ;
+    border-radius: ;
+    padding: ;
+}
+.card-title h2{
+    background-color: #616161;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.professional-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* professional experience style end */
+
+/* skill start style */
+.skill-container{
+ padding: 45px;
+    
+}
+.skill-container li{
+    list-style-type: none;
+    font-weight: bolder;
+ margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+
+}
+.skill-container li::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(86, 86, 153,.5);
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    height: 10px;
+    border-radius: 1000px;
+}
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(86, 86, 153,.5);
+    top: calc(100% + 5px);
+    left: 0;
+    width: 0;
+    height: 10px;
+    border-radius: 1000px; 
+    animation-duration: 3s;
+    animation-delay: 0.5;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.skill-container li.h1::after{
+    animation-name: h1;
+}
+@keyframes h1{
+    to{
+        width: 90%;
+        background-color: orangered;
+    }
+}
+.skill-container li.c1::after{
+    animation-name: c1;
+}
+@keyframes c1{
+    to{
+        width: 80%;
+        background-color: orangered;
+    }
+}
+.skill-container li.j1::after{
+    animation-name: j1;
+}
+@keyframes j1{
+    to{
+        width: 75%;
+        background-color: orangered;
+    }
+}
+.skill-container li.j2::after{
+    animation-name: j2;
+}
+@keyframes j2{
+    to{
+        width: 90%;
+        background-color: orangered;
+    }
+}
+.skill-container li.n1::after{
+    animation-name: n1;
+}
+@keyframes n1{
+    to{
+        width: 60%;
+        background-color: orangered;
+    }
+}
+.skill-container li.e1::after{
+    animation-name: e1;
+}
+@keyframes e1{
+    to{
+        width: 90%;
+        background-color: orangered;
+    }
+}
+.skill-container li.g1::after{
+    animation-name: g1;
+}
+@keyframes g1{
+    to{
+        width: 90%;
+        background-color: orangered;
+    }
+}
+.skill-container li.r1::after{
+    animation-name: r1;
+}
+@keyframes r1{
+    to{
+        width: 90%;
+        background-color: orangered;
+    }
+}
+
+.skill::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* skill end style */
+
+
+/*achivement contact start here*/
+.achivement-contact{
+    padding: 1% 7%;
+    background-color: orangered;
+    color: white;
+}
+.achivement-contact::after{
+    content: '';
+display: table;
+clear: both;
+}
+.contact{
+    text-align: center;
+}
+.contact input, textarea{
+width: 100%;
+padding: 10px;
+font-size: 1rem;
+text-align: center;
+border: none;
+border-radius: 5px;
+resize: none;
+
+}
+.contact button{
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background-color: #052d2f;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+}
+
+.contact-link{
+    text-align: center;
+}
+.media-btn .btn{
+   border: none; 
+   border-radius: 25px;
+   cursor: pointer;
+   font-size: 32px;
+   padding: 5px;
+   margin: 10px;
+   width: 50px;
+   background-color: white;
+}
+.btn:hover{
+    background-color: gray;
+}
+
+/*achivement contact end here*/
+
+
+/* footer style start */
+.footer{
+background-color: black;
+color: white;
+padding: 20px;
+text-align: center;
+font-size: 1rem;
+}
+.footer-menu a{
+display: block;
+margin: 15px 0;
+}
+.footer-menu a:hover{
+    color: gray;
+}
+
+
+
+
+.footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* footer style end */
